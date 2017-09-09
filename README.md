@@ -20,3 +20,9 @@ Run app
 ```sh
 $ npm start
 ```
+
+#To configure angular-src file
+cd ./angular-src
+ng build
+cd ../
+node app

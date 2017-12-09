@@ -65,6 +65,27 @@ var AuthService = (function () {
             return 'http://localhost:8080/' + ep;
         }
     };
+      AuthService.prototype.getAllTodos = function() {
+        var headers = new Headers();
+        this.loadToken();
+        var ep = this.prepEndpoint("dashboard/todos");
+        headers.    append("Authentication", this.authToken);
+        headers.append("Content-Type", "application/json");
+        return this.http.get(ep, {headers: headers}).map(res => res.json());
+      };
+
+      AuthService.prototype.createTodo = function(data) {
+        if (!data) {
+          console.log("Invalid data provided");
+        } else {
+          var headers = new Headers();
+          var ep = this.prepEndpoint("dashboard/todos-create");
+          headers.append("Authentication", this.authToken);
+          headers.append("Content-Type", "application/json");
+          return this.http.post(ep, data, {headers : headers}).map(res => res.json());
+        }
+      };
+
     return AuthService;
 }());
 AuthService = __decorate([

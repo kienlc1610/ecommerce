@@ -69,7 +69,7 @@ AppComponent = __decorate([
     })
 ], AppComponent);
 
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/app.component.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/app.component.js.map
 
 /***/ }),
 
@@ -91,11 +91,15 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__ = __webpack_require__("../../../../../src/app/components/profile/profile.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_page_not_found_pageNotFound_component__ = __webpack_require__("../../../../../src/app/components/page-not-found/pageNotFound.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_crm_crm_component__ = __webpack_require__("../../../../../src/app/components/crm/crm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_crm_lead_component__ = __webpack_require__("../../../../../src/app/components/crm/lead.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_todo_todo_component__ = __webpack_require__("../../../../../src/app/components/todo/todo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_todo_todo_create_component__ = __webpack_require__("../../../../../src/app/components/todo/todo.create.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -119,12 +123,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
 var appRoutes = [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_9__components_home_home_component__["a" /* HomeComponent */] },
     { path: 'register', component: __WEBPACK_IMPORTED_MODULE_8__components_register_register_component__["a" /* RegisterComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_7__components_login_login_component__["a" /* LoginComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_10__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_16__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_16__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_10__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
+    /* Crm components */
+    { path: 'dashboard/crm', component: __WEBPACK_IMPORTED_MODULE_13__components_crm_crm_component__["a" /* CRMComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'dashboard/crm/leads', component: __WEBPACK_IMPORTED_MODULE_14__components_crm_lead_component__["a" /* LeadComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'dashboard/crm/leads/:id', component: __WEBPACK_IMPORTED_MODULE_14__components_crm_lead_component__["a" /* LeadComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
+    /* Profile */
+    { path: 'dashboard/profile', component: __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
+    /* Todos */
+    { path: "dashboard/todos", component: __WEBPACK_IMPORTED_MODULE_15__components_todo_todo_component__["a" /* TodoComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: "dashboard/todos-create", component: __WEBPACK_IMPORTED_MODULE_16__components_todo_todo_create_component__["a" /* TodoCreateComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
     /* Redirect to 404 when page is found */
     { path: '404', component: __WEBPACK_IMPORTED_MODULE_12__components_page_not_found_pageNotFound_component__["a" /* PageNotFoundComponent */] },
     { path: '**', redirectTo: '404' }
@@ -143,21 +160,156 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_8__components_register_register_component__["a" /* RegisterComponent */],
             __WEBPACK_IMPORTED_MODULE_9__components_home_home_component__["a" /* HomeComponent */],
             __WEBPACK_IMPORTED_MODULE_10__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__["a" /* ProfileComponent */]
+            __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__["a" /* ProfileComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__components_crm_crm_component__["a" /* CRMComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__components_crm_lead_component__["a" /* LeadComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__components_page_not_found_pageNotFound_component__["a" /* PageNotFoundComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__components_todo_todo_component__["a" /* TodoComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__components_todo_todo_create_component__["a" /* TodoCreateComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
             __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */].forRoot(appRoutes),
-            __WEBPACK_IMPORTED_MODULE_15_angular2_flash_messages__["FlashMessagesModule"]
+            __WEBPACK_IMPORTED_MODULE_19_angular2_flash_messages__["FlashMessagesModule"]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_13__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_14__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_16__guards_auth_guard__["a" /* AuthGuard */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_17__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_18__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/app.module.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/crm/crm.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n\n<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-12\">\n            <div class=\"form-horizontal\">\n                <ul class=\"list-inline\">\n                    <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" class=\"list-inline-item\"><a (mousedown)=\"switchToLeadView()\" [routerLink]=\"['leads']\">Lead</a></li>\n                    <!--<li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\"  class=\"list-inline-item\"><a [routerLink]=\"['dashboard/crm/companies']\">Company</a></li>-->\n                    <!--<li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" class=\"list-inline-item\"><a [routerLink]=\"['dashboard/crm/contacts']\">Contact</a></li>-->\n                </ul>\n            </div>\n        </div>\n\n        <div class=\"col-12\">\n            <lead-component *ngIf=\"isLeadView === true\"></lead-component>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/crm/crm.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CRMComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var CRMComponent = (function () {
+    function CRMComponent(authService, router, flashMessagesService) {
+        this.authService = authService;
+        this.router = router;
+        this.flashMessagesService = flashMessagesService;
+        this.isLeadView = false;
+    }
+    CRMComponent.prototype.ngOnInit = function () {
+    };
+    CRMComponent.prototype.switchToLeadView = function () {
+        this.isLeadView = true;
+    };
+    return CRMComponent;
+}());
+CRMComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'crm',
+        template: __webpack_require__("../../../../../src/app/components/crm/crm.component.html"),
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _c || Object])
+], CRMComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/crm.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/crm/lead.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".margin-top-50 {\n    margin-top: 50px;}\n/*Filter START*/\n.filterable {\n    margin-top: 15px;\n}\n.filterable .panel-heading .pull-right {\n    margin-top: -20px;\n}\n.filterable .filters input[disabled] {\n    background-color: transparent;\n    border: none;\n    cursor: auto;\n    box-shadow: none;\n    padding: 0;\n    height: auto;\n}\n.filterable .filters input[disabled]::-webkit-input-placeholder {\n    color: #333;\n}\n.filterable .filters input[disabled]::-moz-placeholder {\n    color: #333;\n}\n.filterable .filters input[disabled]:-ms-input-placeholder {\n    color: #333;\n}\n/*Filter END*/\n\n.table-widthB{\n    width: 48%;\n}\n\n.table-widthA{\n    width: 49.8%;\n}\n\n.bg{\n    background-color: white;\n}\n\n.tablescroll {\n    overflow-y: auto;\n    overflow-x: hidden;\n    height: 189px;\n    margin-right: 1px;\n}\n.marginTop30{\n    margin-top:30px;\n}\n\n.radio,\n.checkbox {\n    margin-top: 0px;\n    margin-bottom: 0px;\n}\n\n.checkbox,.radio{\n    margin-top:0px;\n    margin-bottom:0px\n}\n\n.radio-margin{\n    margin-left: -13px;\n    margin-top: 7px;\n}\n.radio-margin{\n    margin-left: -13px;\n    margin-top: 7px;\n}\n.EU_DataTable td, th {\n    padding: 6px;\n    border: 1px solid #ccc;\n    text-align: left;\n    height: 50px;\n}\nth {\n    background: #e5e5e5;\n    color: #454545;\n    font-weight: bold;\n    height: 40px;\n}\n/*Radio and Checkbox START*/\n.checkbox label:after,\n.radio label:after {\n    content: '';\n    display: table;\n    clear: both;\n}\n\n.checkbox .cr,\n.radio .cr {\n    position: relative;\n    display: inline-block;\n    border: 1px solid #a9a9a9;\n    border-radius: .25em;\n    width: 1.3em;\n    height: 1.3em;\n    float: left;\n    margin-right: .5em;\n}\n\n.radio .cr {\n    border-radius: 50%;\n}\n\n.checkbox .cr .cr-icon,\n.radio .cr .cr-icon {\n    position: absolute;\n    font-size: .8em;\n    line-height: 0;\n    top: 50%;\n    left: 20%;\n}\n\n.checkbox label input[type=\"checkbox\"],\n.radio label input[type=\"radio\"] {\n    display: none;\n}\n\n.checkbox label input[type=\"checkbox\"] + .cr > .cr-icon,\n.radio label input[type=\"radio\"] + .cr > .cr-icon {\n    -webkit-transform: scale(3) rotateZ(-20deg);\n            transform: scale(3) rotateZ(-20deg);\n    opacity: 0;\n    transition: all .3s ease-in;\n}\n\n.checkbox label input[type=\"checkbox\"]:checked + .cr > .cr-icon,\n.radio label input[type=\"radio\"]:checked + .cr > .cr-icon {\n    -webkit-transform: scale(1) rotateZ(0deg);\n            transform: scale(1) rotateZ(0deg);\n    opacity: 1;\n}\n\n.checkbox label input[type=\"checkbox\"]:disabled + .cr,\n.radio label input[type=\"radio\"]:disabled + .cr {\n    opacity: .5;\n}\n/*Radio and Checkbox END*/", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/crm/lead.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n    <div class=\"row\">\n        <input type=\"text\" placeholder=\"search for lead\">\n        <button type=\"button\">Search</button>\n        <a type=\"button\" [routerLink]=\"['/leads/create']\">Add new lead</a>\n\n        <table class=\"table\">\n            <thead>\n            <tr>\n                <th>#</th>\n                <th>First Name</th>\n                <th>Last Name</th>\n                <th>Username</th>\n            </tr>\n            </thead>\n            <tbody>\n            <tr>\n                <th scope=\"row\"><input type=\"checkbox\" style=\"text-align: center\"></th>\n                <td>Mark</td>\n            </tr>\n            </tbody>\n        </table>\n    </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/crm/lead.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LeadComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LeadComponent = (function () {
+    function LeadComponent(authService) {
+        this.authService = authService;
+        this.leads = [];
+    }
+    LeadComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.authService.getAllLeads().subscribe(function (dbLeads) {
+            _this.leads = dbLeads.leads;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    return LeadComponent;
+}());
+LeadComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'lead-component',
+        template: __webpack_require__("../../../../../src/app/components/crm/lead.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/crm/lead.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object])
+], LeadComponent);
+
+var _a;
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/lead.component.js.map
 
 /***/ }),
 
@@ -182,7 +334,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Dashboard</h2>\n<p>Welcome to your dashboard</p>\n"
+module.exports = "<h2 class=\"page-header\">Dashboard</h2>\n<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n    <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item active\">\n                <a class=\"nav-link\" [routerLink]=\"['/dashboard/profile']\">Profile<span class=\"sr-only\">(current)</span></a>\n            </li>\n\n            <li class=\"nav-item active\">\n                <a class=\"nav-link\" [routerLink]=\"['/dashboard/todos']\">Todos<span class=\"sr-only\">(current)</span></a>\n            </li>\n\n        </ul>\n    </div>\n</nav>\n\n"
 
 /***/ }),
 
@@ -218,7 +370,7 @@ DashboardComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], DashboardComponent);
 
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/dashboard.component.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/dashboard.component.js.map
 
 /***/ }),
 
@@ -279,7 +431,7 @@ HomeComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], HomeComponent);
 
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/home.component.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/home.component.js.map
 
 /***/ }),
 
@@ -375,7 +527,7 @@ LoginComponent = __decorate([
 ], LoginComponent);
 
 var _a, _b, _c;
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/login.component.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/login.component.js.map
 
 /***/ }),
 
@@ -400,7 +552,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" href=\"#\">MEAN Auth App</a>\n        </div>\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\n          <ul class=\"nav navbar-nav navbar-left\">\n            <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/']\">Home</a></li>\n          </ul>\n\n          <ul class=\"nav navbar-nav navbar-right\">\n            <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/dashboard']\">Dashboard</a></li>\n            <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/profile']\">Profile</a></li>\n\n            <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/login']\">Login</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/register']\">Register</a></li>\n            <li *ngIf=\"authService.loggedIn()\"><a (click)=\"onLogoutClick()\" href=\"#\">Logout</a></li>\n          </ul>\n        </div><!--/.nav-collapse -->\n      </div>\n    </nav>\n"
+module.exports = "<nav class=\"navbar navbar-default\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" href=\"#\">MEAN Auth App</a>\n        </div>\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\n          <ul class=\"nav navbar-nav navbar-left\">\n            <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/']\">Home</a></li>\n          </ul>\n\n          <ul class=\"nav navbar-nav navbar-right\">\n            <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/dashboard']\">Dashboard</a></li>\n            <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/dashboard/crm']\">CRM</a></li>\n            <!--<li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/profile']\">Profile</a></li>-->\n\n            <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/login']\">Login</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/register']\">Register</a></li>\n            <li *ngIf=\"authService.loggedIn()\"><a (click)=\"onLogoutClick()\" href=\"#\">Logout</a></li>\n          </ul>\n        </div><!--/.nav-collapse -->\n      </div>\n    </nav>\n"
 
 /***/ }),
 
@@ -456,7 +608,14 @@ NavbarComponent = __decorate([
 ], NavbarComponent);
 
 var _a, _b, _c;
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/navbar.component.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/navbar.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/page-not-found/pageNotFound.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "Page not found!"
 
 /***/ }),
 
@@ -465,13 +624,34 @@ var _a, _b, _c;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNotFoundComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 var PageNotFoundComponent = (function () {
     function PageNotFoundComponent() {
     }
+    ;
+    PageNotFoundComponent.prototype.ngOnInit = function () { };
+    ;
     return PageNotFoundComponent;
 }());
+PageNotFoundComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: "page-not-found",
+        template: __webpack_require__("../../../../../src/app/components/page-not-found/pageNotFound.component.html")
+    }),
+    __metadata("design:paramtypes", [])
+], PageNotFoundComponent);
 
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/pageNotFound.component.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/pageNotFound.component.js.map
 
 /***/ }),
 
@@ -546,7 +726,7 @@ ProfileComponent = __decorate([
 ], ProfileComponent);
 
 var _a, _b;
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/profile.component.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/profile.component.js.map
 
 /***/ }),
 
@@ -571,7 +751,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--<h2 class=\"page-header\">Register</h2>-->\n<!--<form (submit)=\"onRegisterSubmit()\">-->\n  <!--<div class=\"form-group\">-->\n    <!--<label>Name</label>-->\n    <!--<input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\">-->\n  <!--</div>-->\n  <!--<div class=\"form-group\">-->\n    <!--<label>Username</label>-->\n    <!--<input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\">-->\n  <!--</div>-->\n  <!--<div class=\"form-group\">-->\n    <!--<label>Email</label>-->\n    <!--<input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" >-->\n  <!--</div>-->\n  <!--<div class=\"form-group\">-->\n    <!--<label>Password</label>-->\n    <!--<input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\">-->\n  <!--</div>-->\n  <!--<input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">-->\n<!--</form>-->\n"
+module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onRegisterSubmit()\">\n  <div class=\"form-group\">\n    <label>Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Username</label>\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Email</label>\n    <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Password</label>\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>\n"
 
 /***/ }),
 
@@ -651,7 +831,159 @@ RegisterComponent = __decorate([
 ], RegisterComponent);
 
 var _a, _b, _c, _d;
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/register.component.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/register.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/todo/todo.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/todo/todo.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n\n<h2><a [routerLink]=\"['/dashboard/todos-create']\">Create</a></h2>\n\n<ul>\n  <li *ngFor=\"let todo of todos\">\n    {{todo.name}} {{todo.description || \"N/A\"}} {{todo.startDate || \"N/A\"}} {{todo.endDate || \"N/A\"}}\n  </li>\n</ul>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/todo/todo.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TodoComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TodoComponent = (function () {
+    function TodoComponent(authService) {
+        this.authService = authService;
+    }
+    TodoComponent.prototype.ngOnInit = function () {
+        this.authService.getAllTodos()
+            .subscribe(function (todos) {
+            if (todos) {
+                todos = todos;
+            }
+        });
+    };
+    return TodoComponent;
+}());
+TodoComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-todo',
+        template: __webpack_require__("../../../../../src/app/components/todo/todo.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/todo/todo.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object])
+], TodoComponent);
+
+var _a;
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/todo.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/todo/todo.create.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<form (submit)=\"onTodoSubmit()\">\n    <div class=\"form-group\">\n        <label>Name</label>\n        <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\">\n    </div>\n    <div class=\"form-group\">\n        <label>Description</label>\n        <input type=\"text\" [(ngModel)]=\"description\" name=\"username\" class=\"form-control\">\n    </div>\n    <div class=\"form-group\">\n        <label>StartDate</label>\n        <input type=\"date\" [(ngModel)]=\"startDate\" name=\"startDate\" class=\"form-control\">\n    </div>\n    <div class=\"form-group\">\n        <label>EndDate</label>\n        <input type=\"date\" [(ngModel)]=\"endDate\" name=\"endDate\" class=\"form-control\">\n    </div>\n\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/todo/todo.create.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TodoCreateComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var TodoCreateComponent = (function () {
+    function TodoCreateComponent(flashMessagesService, router, authService) {
+        this.flashMessagesService = flashMessagesService;
+        this.router = router;
+        this.authService = authService;
+    }
+    ;
+    TodoCreateComponent.prototype.ngOnInit = function () {
+    };
+    TodoCreateComponent.prototype.onTodoSubmit = function () {
+        var _this = this;
+        var dataTodo = {
+            name: this.name,
+            description: this.description || null,
+            startDate: this.startDate,
+            endDate: this.endDate
+        };
+        if (!dataTodo.name) {
+            this.flashMessagesService.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
+            return;
+        }
+        else {
+            /* Continue */
+        }
+        this.authService.createTodo(dataTodo)
+            .subscribe(function (newTodo) {
+            if (newTodo) {
+                _this.flashMessagesService.show("Todo created successfully", { cssClass: 'alert-success', timeout: 3000 });
+                _this.router.navigate(['/dashboard/todos']);
+            }
+            else {
+                _this.flashMessagesService.show("Something went wrong", { cssClass: 'alert-danger', timeout: 3000 });
+                _this.router.navigate(['/dashboard/todos-create']);
+            }
+        });
+    };
+    return TodoCreateComponent;
+}());
+TodoCreateComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-todo-create',
+        template: __webpack_require__("../../../../../src/app/components/todo/todo.create.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object])
+], TodoCreateComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/todo.create.component.js.map
 
 /***/ }),
 
@@ -697,7 +1029,7 @@ AuthGuard = __decorate([
 ], AuthGuard);
 
 var _a, _b;
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/auth.guard.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/auth.guard.js.map
 
 /***/ }),
 
@@ -779,6 +1111,33 @@ var AuthService = (function () {
             return 'http://localhost:8080/' + ep;
         }
     };
+    AuthService.prototype.getAllLeads = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        this.loadToken();
+        var ep = this.prepEndpoint("dashboard/crm/leads");
+        headers.append("Authorization", this.authToken);
+        headers.append("Content-Type", "application/json");
+        return this.http.get(ep, { headers: headers }).map(function (res) { return res.json(); });
+    };
+    AuthService.prototype.getAllTodos = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        this.loadToken();
+        var ep = this.prepEndpoint("todos");
+        headers.append("Authentication", this.authToken);
+        headers.append("Content-Type", "application/json");
+        return this.http.get(ep, { headers: headers }).map(function (res) { return res.json(); });
+    };
+    AuthService.prototype.createTodo = function (data) {
+        if (!data) {
+            console.log("Invalid data provided");
+        }
+        else {
+            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+            var ep = this.prepEndpoint("todos/create");
+            headers.append("Content-Type", "application/json");
+            return this.http.post(ep, { headers: headers, data: data }).map(function (res) { return res.json(); });
+        }
+    };
     return AuthService;
 }());
 AuthService = __decorate([
@@ -787,7 +1146,7 @@ AuthService = __decorate([
 ], AuthService);
 
 var _a;
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/auth.service.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/auth.service.js.map
 
 /***/ }),
 
@@ -829,7 +1188,7 @@ ValidateService = __decorate([
     __metadata("design:paramtypes", [])
 ], ValidateService);
 
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/validate.service.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/validate.service.js.map
 
 /***/ }),
 
@@ -846,7 +1205,7 @@ ValidateService = __decorate([
 var environment = {
     production: false
 };
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/environment.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/environment.js.map
 
 /***/ }),
 
@@ -867,7 +1226,7 @@ if (__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment *
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["enableProdMode"])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=/home/phuocnh/Desktop/tut/crm_app/angular-src/src/main.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/main.js.map
 
 /***/ }),
 

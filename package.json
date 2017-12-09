@@ -8,15 +8,18 @@
     "start": "node app"
   },
   "dependencies": {
-    "express": "*",
-    "mongoose": "*",
     "bcryptjs": "*",
-    "cors": "*",
-    "jsonwebtoken": "*",
     "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
     "passport": "*",
-    "passport-jwt": "*"
+    "passport-jwt": "*",
+    "path": "0.12.7",
+    "promise": "8.0.1"
   },
-  "author": "Brad Traversy",
+  "author": "Peter Nyu",
+  "copyrights": "Peter Nyu",
   "license": "ISC"
 }

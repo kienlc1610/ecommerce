@@ -1,0 +1,19 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-horizontal">
+                <ul class="list-inline">
+                    <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" class="list-inline-item"><a (mousedown)="switchToLeadView()" [routerLink]="['leads']">Lead</a></li>
+                    <!--<li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']"  class="list-inline-item"><a [routerLink]="['dashboard/crm/companies']">Company</a></li>-->
+                    <!--<li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" class="list-inline-item"><a [routerLink]="['dashboard/crm/contacts']">Contact</a></li>-->
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <lead-component *ngIf="isLeadView === true"></lead-component>
+        </div>
+    </div>
+</div>

@@ -19,6 +19,7 @@ import {TodoCreateComponent} from './components/todo/todo.create.component';
 
 import {ValidateService} from './services/validate.service';
 import {AuthService} from './services/auth.service';
+import {TodoService} from './services/todos.service';
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import {AuthGuard} from './guards/auth.guard';
 
@@ -67,7 +68,7 @@ const appRoutes: Routes = [
         RouterModule.forRoot(appRoutes),
         FlashMessagesModule
     ],
-    providers: [ValidateService, AuthService, AuthGuard],
+    providers: [ValidateService, AuthService, AuthGuard, TodoService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

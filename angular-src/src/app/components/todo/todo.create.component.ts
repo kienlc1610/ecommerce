@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FlashMessagesService} from 'angular2-flash-messages';
 import { Router } from "@angular/router";
-import { AuthService } from "../../services/auth.service";
+import { TodoService } from "../../services/todos.service";
 
 @Component({
     selector: 'app-todo-create',
@@ -16,7 +16,7 @@ export class TodoCreateComponent implements OnInit {
     constructor(
         private flashMessagesService :  FlashMessagesService,
         private router : Router,
-        private authService : AuthService
+        private TodoService : TodoService
     ) {};
 
     ngOnInit() {
@@ -37,7 +37,7 @@ export class TodoCreateComponent implements OnInit {
             /* Continue */
         }
 
-        this.authService.createTodo(dataTodo)
+        this.TodoService.createTodo(dataTodo)
             .subscribe(newTodo => {
                 if(newTodo) {
                     this.flashMessagesService.show("Todo created successfully", {cssClass: 'alert-success', timeout: 3000});

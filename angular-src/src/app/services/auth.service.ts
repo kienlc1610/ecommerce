@@ -68,33 +68,4 @@ export class AuthService {
             return 'http://localhost:8080/' + ep;
         }
     }
-
-    getAllLeads() {
-        var headers = new Headers();
-        this.loadToken();
-        var ep = this.prepEndpoint("dashboard/crm/leads");
-        headers.append("Authorization", this.authToken);
-        headers.append("Content-Type", "application/json");
-        return this.http.get(ep, {headers: headers}).map(res => res.json());
-    }
-
-    getAllTodos() {
-        var headers = new Headers();
-        this.loadToken();
-        var ep = this.prepEndpoint("todos");
-        headers.append("Authentication", this.authToken);
-        headers.append("Content-Type", "application/json");
-        return this.http.get(ep, {headers: headers}).map(res => res.json());
-    }
-
-    createTodo(data) {
-        if (!data) {
-            console.log("Invalid data provided");
-        } else {
-            var headers = new Headers();
-            var ep = this.prepEndpoint("todos/create");
-            headers.append("Content-Type", "application/json");
-            return this.http.post(ep, {headers: headers, data: data}).map(res => res.json());
-        }
-    }
 }

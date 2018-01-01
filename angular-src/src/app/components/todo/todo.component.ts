@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthService} from "../../services/auth.service";
+import {TodoService} from "../../services/todos.service";
 
 @Component({
   selector: 'app-todo',
@@ -7,17 +7,21 @@ import {AuthService} from "../../services/auth.service";
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
+    public todos : any[];
 
   constructor(
-      private authService : AuthService
+      private TodoService : TodoService
   ) { }
 
   ngOnInit() {
-    this.authService.getAllTodos()
+    this.TodoService.getAllTodos()
         .subscribe(todos => {
-          if(todos) {
-            todos = todos;
-          }
+            if(todos && todos.todos) {
+                if(todos.todos.length) {
+                    this.todos = todos.todos;
+                }
+            }
+          debugger;
         });
   }
 

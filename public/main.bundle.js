@@ -97,9 +97,10 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_todo_todo_create_component__ = __webpack_require__("../../../../../src/app/components/todo/todo.create.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_todos_service__ = __webpack_require__("../../../../../src/app/services/todos.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -127,21 +128,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var appRoutes = [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_9__components_home_home_component__["a" /* HomeComponent */] },
     { path: 'register', component: __WEBPACK_IMPORTED_MODULE_8__components_register_register_component__["a" /* RegisterComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_7__components_login_login_component__["a" /* LoginComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_10__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_10__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_21__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_21__guards_auth_guard__["a" /* AuthGuard */]] },
     /* Crm components */
-    { path: 'dashboard/crm', component: __WEBPACK_IMPORTED_MODULE_13__components_crm_crm_component__["a" /* CRMComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'dashboard/crm/leads', component: __WEBPACK_IMPORTED_MODULE_14__components_crm_lead_component__["a" /* LeadComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'dashboard/crm/leads/:id', component: __WEBPACK_IMPORTED_MODULE_14__components_crm_lead_component__["a" /* LeadComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'dashboard/crm', component: __WEBPACK_IMPORTED_MODULE_13__components_crm_crm_component__["a" /* CRMComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_21__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'dashboard/crm/leads', component: __WEBPACK_IMPORTED_MODULE_14__components_crm_lead_component__["a" /* LeadComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_21__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'dashboard/crm/leads/:id', component: __WEBPACK_IMPORTED_MODULE_14__components_crm_lead_component__["a" /* LeadComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_21__guards_auth_guard__["a" /* AuthGuard */]] },
     /* Profile */
-    { path: 'dashboard/profile', component: __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'dashboard/profile', component: __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_21__guards_auth_guard__["a" /* AuthGuard */]] },
     /* Todos */
-    { path: "dashboard/todos", component: __WEBPACK_IMPORTED_MODULE_15__components_todo_todo_component__["a" /* TodoComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: "dashboard/todos-create", component: __WEBPACK_IMPORTED_MODULE_16__components_todo_todo_create_component__["a" /* TodoCreateComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: "dashboard/todos", component: __WEBPACK_IMPORTED_MODULE_15__components_todo_todo_component__["a" /* TodoComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_21__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: "dashboard/todos-create", component: __WEBPACK_IMPORTED_MODULE_16__components_todo_todo_create_component__["a" /* TodoCreateComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_21__guards_auth_guard__["a" /* AuthGuard */]] },
     /* Redirect to 404 when page is found */
     { path: '404', component: __WEBPACK_IMPORTED_MODULE_12__components_page_not_found_pageNotFound_component__["a" /* PageNotFoundComponent */] },
     { path: '**', redirectTo: '404' }
@@ -172,9 +174,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
             __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */].forRoot(appRoutes),
-            __WEBPACK_IMPORTED_MODULE_19_angular2_flash_messages__["FlashMessagesModule"]
+            __WEBPACK_IMPORTED_MODULE_20_angular2_flash_messages__["FlashMessagesModule"]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_17__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_18__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_17__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_18__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_21__guards_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_19__services_todos_service__["a" /* TodoService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
@@ -289,13 +291,6 @@ var LeadComponent = (function () {
         this.leads = [];
     }
     LeadComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.authService.getAllLeads().subscribe(function (dbLeads) {
-            _this.leads = dbLeads.leads;
-        }, function (err) {
-            console.log(err);
-            return false;
-        });
     };
     return LeadComponent;
 }());
@@ -866,7 +861,7 @@ module.exports = "\n\n<h2><a [routerLink]=\"['/dashboard/todos-create']\">Create
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TodoComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_todos_service__ = __webpack_require__("../../../../../src/app/services/todos.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -879,15 +874,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var TodoComponent = (function () {
-    function TodoComponent(authService) {
-        this.authService = authService;
+    function TodoComponent(TodoService) {
+        this.TodoService = TodoService;
     }
     TodoComponent.prototype.ngOnInit = function () {
-        this.authService.getAllTodos()
+        var _this = this;
+        this.TodoService.getAllTodos()
             .subscribe(function (todos) {
-            if (todos) {
-                todos = todos;
+            if (todos && todos.todos) {
+                if (todos.todos.length) {
+                    _this.todos = todos.todos;
+                }
             }
+            debugger;
         });
     };
     return TodoComponent;
@@ -898,7 +897,7 @@ TodoComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/todo/todo.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/todo/todo.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_todos_service__["a" /* TodoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_todos_service__["a" /* TodoService */]) === "function" && _a || Object])
 ], TodoComponent);
 
 var _a;
@@ -922,7 +921,7 @@ module.exports = "<form (submit)=\"onTodoSubmit()\">\n    <div class=\"form-grou
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_todos_service__ = __webpack_require__("../../../../../src/app/services/todos.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -937,10 +936,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var TodoCreateComponent = (function () {
-    function TodoCreateComponent(flashMessagesService, router, authService) {
+    function TodoCreateComponent(flashMessagesService, router, TodoService) {
         this.flashMessagesService = flashMessagesService;
         this.router = router;
-        this.authService = authService;
+        this.TodoService = TodoService;
     }
     ;
     TodoCreateComponent.prototype.ngOnInit = function () {
@@ -960,7 +959,7 @@ var TodoCreateComponent = (function () {
         else {
             /* Continue */
         }
-        this.authService.createTodo(dataTodo)
+        this.TodoService.createTodo(dataTodo)
             .subscribe(function (newTodo) {
             if (newTodo) {
                 _this.flashMessagesService.show("Todo created successfully", { cssClass: 'alert-success', timeout: 3000 });
@@ -979,7 +978,7 @@ TodoCreateComponent = __decorate([
         selector: 'app-todo-create',
         template: __webpack_require__("../../../../../src/app/components/todo/todo.create.component.html")
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_todos_service__["a" /* TodoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_todos_service__["a" /* TodoService */]) === "function" && _c || Object])
 ], TodoCreateComponent);
 
 var _a, _b, _c;
@@ -1111,15 +1110,58 @@ var AuthService = (function () {
             return 'http://localhost:8080/' + ep;
         }
     };
-    AuthService.prototype.getAllLeads = function () {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
-        this.loadToken();
-        var ep = this.prepEndpoint("dashboard/crm/leads");
-        headers.append("Authorization", this.authToken);
-        headers.append("Content-Type", "application/json");
-        return this.http.get(ep, { headers: headers }).map(function (res) { return res.json(); });
+    return AuthService;
+}());
+AuthService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
+], AuthService);
+
+var _a;
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/auth.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/todos.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TodoService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var TodoService = (function () {
+    function TodoService(http) {
+        this.http = http;
+        debugger;
+        this.isDev = true; // Change to false before deployment
+    }
+    TodoService.prototype.loadToken = function () {
+        var token = localStorage.getItem('id_token');
+        this.authToken = token;
     };
-    AuthService.prototype.getAllTodos = function () {
+    TodoService.prototype.prepEndpoint = function (ep) {
+        if (this.isDev) {
+            return ep;
+        }
+        else {
+            return 'http://localhost:8080/' + ep;
+        }
+    };
+    TodoService.prototype.getAllTodos = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         this.loadToken();
         var ep = this.prepEndpoint("todos");
@@ -1127,7 +1169,7 @@ var AuthService = (function () {
         headers.append("Content-Type", "application/json");
         return this.http.get(ep, { headers: headers }).map(function (res) { return res.json(); });
     };
-    AuthService.prototype.createTodo = function (data) {
+    TodoService.prototype.createTodo = function (data) {
         if (!data) {
             console.log("Invalid data provided");
         }
@@ -1138,15 +1180,19 @@ var AuthService = (function () {
             return this.http.post(ep, { headers: headers, data: data }).map(function (res) { return res.json(); });
         }
     };
-    return AuthService;
+    TodoService.prototype.editTodo = function (data) {
+    };
+    TodoService.prototype.deleteTodo = function (data) {
+    };
+    return TodoService;
 }());
-AuthService = __decorate([
+TodoService = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
-], AuthService);
+], TodoService);
 
 var _a;
-//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/auth.service.js.map
+//# sourceMappingURL=/home/phuocnh/Desktop/crm_app/angular-src/src/todos.service.js.map
 
 /***/ }),
 

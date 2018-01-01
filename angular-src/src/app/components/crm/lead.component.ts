@@ -17,13 +17,5 @@ export class LeadComponent implements OnInit {
     ){}
 
     ngOnInit() {
-        this.authService.getAllLeads().subscribe(
-            dbLeads => {
-                this.leads = dbLeads.leads;
-            }, err => {
-                console.log(err);
-                return false;
-            }
-        )
     }
 }

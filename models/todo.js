@@ -18,8 +18,7 @@ const Todo = module.exports = mongoose.model('Todo', TodoSchema);
 
 
 module.exports.getAll = function(callback) {
-  Todo.find();
-  callback();
+  Todo.find(callback);
 };
 
 module.exports.create = function(data, callback) {

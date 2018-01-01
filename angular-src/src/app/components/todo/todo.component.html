@@ -5,5 +5,7 @@
 <ul>
   <li *ngFor="let todo of todos">
     {{todo.name}} {{todo.description || "N/A"}} {{todo.startDate || "N/A"}} {{todo.endDate || "N/A"}}
+    <button class="btn btn-default btn-primary">Edit</button>
+    <button class="btn btn-default btn-danger">Delete</button>
   </li>
 </ul>

@@ -5,17 +5,9 @@ const router = express.Router();
 
 router.get("", (req, res, next) => {
   Todo.getAll((err, todos) => {
-    if(err) {
-      res.json({
-        err : err,
-        todos : []
-      })
-    } else {
-      res.json({
-        err : null,
-        todos : todos
-      });
-    }
+    res.json({
+      todos: todos
+    })
   });
 });
 

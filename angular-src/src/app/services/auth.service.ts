@@ -29,13 +29,13 @@ export class AuthService {
             .map(res => res.json());
     }
 
-    getProfile() {
+    getProfile(userId) {
         var headers = new Headers();
         this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
         var ep = this.prepEndpoint('users/profile');
-        return this.http.get(ep, {headers: headers})
+        return this.http.post(ep, {headers: headers, userId : userId})
             .map(res => res.json());
     }
 

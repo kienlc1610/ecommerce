@@ -701,13 +701,7 @@ var ProfileComponent = (function () {
         this.router = router;
     }
     ProfileComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.authService.getProfile().subscribe(function (profile) {
-            _this.user = profile.user;
-        }, function (err) {
-            console.log(err);
-            return false;
-        });
+        this.user = JSON.parse(localStorage.getItem('user'));
     };
     return ProfileComponent;
 }());
@@ -851,7 +845,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/todo/todo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<h2><a [routerLink]=\"['/dashboard/todos-create']\">Create</a></h2>\n\n<ul>\n  <li *ngFor=\"let todo of todos\">\n    {{todo.name}} {{todo.description || \"N/A\"}} {{todo.startDate || \"N/A\"}} {{todo.endDate || \"N/A\"}}\n  </li>\n</ul>\n"
+module.exports = "\n\n<h2><a [routerLink]=\"['/dashboard/todos-create']\">Create</a></h2>\n\n<ul>\n  <li *ngFor=\"let todo of todos\">\n    {{todo.name}} {{todo.description || \"N/A\"}} {{todo.startDate || \"N/A\"}} {{todo.endDate || \"N/A\"}}\n    <button class=\"btn btn-default btn-primary\">Edit</button>\n    <button class=\"btn btn-default btn-danger\">Delete</button>\n  </li>\n</ul>\n"
 
 /***/ }),
 
@@ -1075,13 +1069,13 @@ var AuthService = (function () {
         return this.http.post(ep, user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
-    AuthService.prototype.getProfile = function () {
+    AuthService.prototype.getProfile = function (userId) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
         var ep = this.prepEndpoint('users/profile');
-        return this.http.get(ep, { headers: headers })
+        return this.http.post(ep, { headers: headers, userId: userId })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.storeUserData = function (token, user) {

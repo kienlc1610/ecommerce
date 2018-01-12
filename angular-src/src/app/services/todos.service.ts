@@ -14,7 +14,6 @@ export class TodoService {
     }
 
     constructor(private http: Http) {
-        debugger;
         this.isDev = true; // Change to false before deployment
     }
 
@@ -47,7 +46,10 @@ export class TodoService {
     }
 
     editTodo(data) {
-
+        var headers = new Headers();
+        var ep = this.prepEndpoint("todos/edit");
+        headers.append("Content-Type", "application/json");
+        return this.http.post(ep, {headers: headers, data: data}).map(res => res.json());
     }
 
     deleteTodo(data) {

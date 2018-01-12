@@ -1,0 +1,11 @@
+<div class="form control form-horizontal">
+    <input [(ngModel)]="editData.name" class="form-control">
+    <input [(ngModel)]="editData.description" class="form-control">
+    <input [(ngModel)]="editData.startDate" class="form-control">
+    <input [(ngModel)]="editData.endDate" class="form-control">
+</div>
+
+<div class="pull-right">
+    <a class="btn btn-default btn-primary" (click)="editTodo(editData)">Submit</a>
+    <button class="btn btn-default btn-primary" (click)="clearEditTodo()">Clear</button>
+</div>

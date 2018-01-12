@@ -21,7 +21,6 @@ export class TodoComponent implements OnInit {
                     this.todos = todos.todos;
                 }
             }
-          debugger;
         });
   }
 

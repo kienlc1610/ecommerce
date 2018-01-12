@@ -16,6 +16,7 @@ import {CRMComponent} from './components/crm/crm.component';
 import {LeadComponent} from './components/crm/lead.component';
 import {TodoComponent } from './components/todo/todo.component';
 import {TodoCreateComponent} from './components/todo/todo.create.component';
+import {TodoEditComponent} from './components/todo/todo.edit.component';
 
 import {ValidateService} from './services/validate.service';
 import {AuthService} from './services/auth.service';
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
     /* Todos */
     { path : "dashboard/todos", component : TodoComponent, canActivate : [AuthGuard] },
     { path : "dashboard/todos-create", component : TodoCreateComponent, canActivate : [AuthGuard] },
+    { path : "dashboard/todos-edit", component : TodoEditComponent, canActivate : [AuthGuard] },
 
     /* Redirect to 404 when page is found */
     {path: '404', component: PageNotFoundComponent},
@@ -59,7 +61,8 @@ const appRoutes: Routes = [
         LeadComponent,
         PageNotFoundComponent,
         TodoComponent,
-        TodoCreateComponent
+        TodoCreateComponent,
+        TodoEditComponent
     ],
     imports: [
         BrowserModule,
